@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Navigate} from 'react-router-dom';
 import {HopePage} from "./pages/HopePage";
 import {FavouritesPages} from "./pages/FavouritesPages";
 import {Navigation} from "./components/Navigation";
@@ -12,8 +12,10 @@ function App() {
 			{/*<Footer/>*/}
 			<Navigation/>
 			<Routes>
-				<Route path="/" element={<HopePage/>}/>
+				<Route path="/" element={<Navigate to={'/home'}/>}/>
+				<Route path="/home" element={<HopePage/>}/>
 				<Route path="/favourites" element={<FavouritesPages/>}/>
+				<Route path="*" element={<div>404</div>}/>
 			</Routes>
 			<Footer/>
 		</>
