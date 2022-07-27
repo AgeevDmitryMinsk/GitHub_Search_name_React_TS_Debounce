@@ -9,15 +9,13 @@ import Footer from "./components/Footer";
 function App() {
 	return (
 		<>
-			<Footer/>
+			{/*<Footer/>*/}
 			<Navigation/>
 			<Routes>
 				<Route path="/" element={<HopePage/>}/>
 				<Route path="/favourites" element={<FavouritesPages/>}/>
-
 			</Routes>
 			<Footer/>
-
 		</>
 
 
